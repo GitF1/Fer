@@ -48,5 +48,65 @@
       "genre": "Action",
       "year": "1999"
     }
+  ],
+  "user": [
+    {
+      "id": "adminuser",
+      "name": "Nihira",
+      "password": "admin",
+      "email": "nihiratechiees@gmail.com",
+      "phone": "8989898989",
+      "country": "usa",
+      "address": "",
+      "role": "admin",
+      "gender": "female"
+    },
+    {
+      "id": "ntuser",
+      "name": "Fullname",
+      "password": "ntuser",
+      "email": "email@email.com",
+      "phone": "56778889989",
+      "country": "vietnam",
+      "address": "address1\naddrees2",
+      "role": "user",
+      "gender": "male"
+    }
+  ],
+  "roleaccess": [
+    {
+      "role": "admin",
+      "menu": "user",
+      "haveadd": true,
+      "haveedit": true,
+      "havedelete": true,
+      "id": "7f77"
+    },
+    {
+      "role": "admin",
+      "menu": "supplier",
+      "haveadd": true,
+      "haveedit": true,
+      "havedelete": true,
+      "id": "2e22"
+    },
+    {
+      "role": "user",
+      "menu": "user",
+      "haveadd": false,
+      "haveedit": false,
+      "havedelete": false,
+      "id": "eba0"
+    }
+  ],
+
+  "posts": [
+    {
+      "id": "1",
+      "description": "Bố già (tiếng Anh: Dad, I'm Sorry) là một bộ phim điện ảnh Việt Nam thuộc thể loại hài – chính kịch ra mắt năm 2021 do Trấn Thành và Vũ Ngọc Đãng đồng đạo diễn",
+      "time": "7/15/2024, 6:39:14 PM",
+      "image_link": "https://th.bing.com/th/id/OIP.XMuuQndM9Rog8qVJ4Lx0yAHaGK?w=216&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+      "video_link": "https://www.youtube.com/embed/oA-BhGNK7qw?si=I3e8wKez36TFbDqw"
+    }
   ]
 }

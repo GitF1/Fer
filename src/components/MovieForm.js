@@ -19,9 +19,9 @@ function MovieForm() {
             genre,
             year
         };
-        await axios.post(`http://localhost:5000/movies`, newMovie);
+        await axios.post(`http://localhost:3000/movies`, newMovie);
         // dispatch(addMovie(newMovie));
-        const response = await axios.get('http://localhost:5000/movies');
+        const response = await axios.get('http://localhost:3000/movies');
             dispatch(setMovies(response.data));
         setTitle('');
         setGenre('');

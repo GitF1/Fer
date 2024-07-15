@@ -1,0 +1,122 @@
+.review-container {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    margin-left: 0;
+    font-family: Arial, sans-serif;
+    /*background-color: white;*/
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-left: '20px';
+    margin-top: '20px';
+}
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 16px;
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.rating {
+    margin-top: 8px;
+}
+.comment {
+    margin-top: 16px;
+    margin-left: 6px;
+    font-size: 14px;
+}
+
+#movie-rating-div {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+#movie-rating-strong {
+    font-size: 32px;
+}
+
+#movie-rating-div img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#total-rating-div {
+    margin-top: 10px;
+}
+
+#write-review-button {
+    margin-left: 59%;
+    padding: 10px 20px;
+    background-color: rgb(216, 45, 139);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* User muốn viết feedback */
+.ratingMovieContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.button-star {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.review-container-2 {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    resize: none;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+#submitReviewMovieButton {
+    padding: 10px 20px;
+    background-color: rgb(216, 45, 139);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-container {
+    text-align: center; margin-top: 20px;
+}
