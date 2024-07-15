@@ -8,6 +8,13 @@ import { Provider } from "react-redux";
 import { RouterProvider } from "react-router-dom";
 import router from "./routes/routes.index";
 
+
+// import bootstrap css : 
+import 'bootstrap/dist/css/bootstrap.min.css'
+// import boorstrap script : 
+import 'bootstrap/dist/js/bootstrap.bundle.min'
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
