@@ -1,30 +1,47 @@
 {
   "movies": [
     {
+<<<<<<< HEAD
       "id": 1,
+=======
+      "id": "1",
+>>>>>>> DuyND
       "title": "The Shawshank Redemption",
       "genre": "Drama",
       "year": 1994
     },
     {
+<<<<<<< HEAD
       "id": 2,
+=======
+      "id": "2",
+>>>>>>> DuyND
       "title": "The Godfather",
       "genre": "Crime",
       "year": 1972
     },
     {
+<<<<<<< HEAD
       "id": 3,
+=======
+      "id": "3",
+>>>>>>> DuyND
       "title": "The Dark Knight",
       "genre": "Action",
       "year": 2008
     },
     {
+<<<<<<< HEAD
       "id": 4,
+=======
+      "id": "4",
+>>>>>>> DuyND
       "title": "Pulp Fiction",
       "genre": "Crime",
       "year": 1994
     },
     {
+<<<<<<< HEAD
       "id": 5,
       "title": "Forrest Gump",
       "genre": "Drama",
@@ -55,6 +72,30 @@
       "rating": 8,
       "timeCreated": "7/15/2024 7:12:15 AM",
       "content": "Great movie, good to see it!"
+=======
+      "id": "5",
+      "title": "Forrest Gump",
+      "genre": "Drama",
+      "year": 1994
+    },
+    {
+      "id": "a1c5",
+      "title": "A",
+      "genre": "Action",
+      "year": "1999"
+    },
+    {
+      "title": "A",
+      "genre": "Action",
+      "year": "1990",
+      "id": "391a"
+    },
+    {
+      "id": "4f85",
+      "title": "ABC",
+      "genre": "Action",
+      "year": "1999"
+>>>>>>> DuyND
     }
   ]
 }
