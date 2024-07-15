@@ -19,7 +19,7 @@ const MoviesList = () => {
         const fetchMovies = async () => {
             dispatch(setStatus('loading'));
             try {
-                const response = await axios.get('http://localhost:5000/movies');
+                const response = await axios.get('http://localhost:3000/movies');
                 dispatch(setMovies(response.data));
                 dispatch(setStatus('succeeded'));
             } catch (error) {
@@ -38,12 +38,12 @@ const MoviesList = () => {
             year
         };
 
-        await axios.put(`http://localhost:5000/movies/${id}`, updatedMovie);
+        await axios.put(`http://localhost:3000/movies/${id}`, updatedMovie);
         setTitle('');
         setGenre('');
         setYear('');
         try {
-            const response = await axios.get('http://localhost:5000/movies');
+            const response = await axios.get('http://localhost:3000/movies');
             dispatch(setMovies(response.data));
             dispatch(setStatus('succeeded'));
         } catch (error) {
@@ -52,9 +52,9 @@ const MoviesList = () => {
     };
     const handleDelete = async (id) => {
         console.log(id);
-        await axios.delete(`http://localhost:5000/movies/${id}`)
+        await axios.delete(`http://localhost:3000/movies/${id}`)
         try {
-            const response = await axios.get('http://localhost:5000/movies');
+            const response = await axios.get('http://localhost:3000/movies');
             dispatch(setMovies(response.data));
             dispatch(setStatus('succeeded'));
         } catch (error) {
