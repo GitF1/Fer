@@ -1,0 +1,74 @@
+{
+  "user": [
+    {
+      "id": "adminuser",
+      "name": "Nihira",
+      "password": "admin",
+      "email": "nihiratechiees@gmail.com",
+      "phone": "8989898989",
+      "country": "usa",
+      "address": "",
+      "role": "admin",
+      "gender": "female"
+    },
+    {
+      "id": "ntuser",
+      "name": "Fullname",
+      "password": "ntuser",
+      "email": "email@email.com",
+      "phone": "56778889989",
+      "country": "vietnam",
+      "address": "address1\naddrees2",
+      "role": "user",
+      "gender": "male"
+    },
+    {
+      "id": "vinhvip",
+      "name": "Nguyen Quang Vinh",
+      "password": "123123abc",
+      "email": "20072003vinh@gmail.com",
+      "phone": "123456789",
+      "country": "vietnam",
+      "address": "abc 12345",
+      "role": "user",
+      "gender": "male"
+    },
+    {
+      "id": "giahuy",
+      "name": "Phan Gia Jiu",
+      "password": "123abc",
+      "email": "abc@gmail.com",
+      "phone": "123",
+      "country": "vietnam",
+      "address": "a",
+      "gender": "female",
+      "role": "user"
+    }
+  ],
+  "roleaccess": [
+    {
+      "role": "admin",
+      "menu": "user",
+      "haveadd": true,
+      "haveedit": true,
+      "havedelete": true,
+      "id": "7f77"
+    },
+    {
+      "role": "admin",
+      "menu": "supplier",
+      "haveadd": true,
+      "haveedit": true,
+      "havedelete": true,
+      "id": "2e22"
+    },
+    {
+      "role": "user",
+      "menu": "user",
+      "haveadd": false,
+      "haveedit": false,
+      "havedelete": false,
+      "id": "eba0"
+    }
+  ]
+}
