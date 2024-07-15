@@ -19,7 +19,7 @@ function EditModal({ post, setListPostAfterEditPost }) {
     const editPostById = async (e) => {
         e.preventDefault()
         try {
-            await axios.put(`http://localhost:9999/posts/${post.id}`, editPost);
+            await axios.put(`http://localhost:8000/posts/${post.id}`, editPost);
             setListPostAfterEditPost(post.id, editPost)
 
         } catch (error) {
