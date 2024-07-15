@@ -18,7 +18,7 @@ function CreateModal({ newPostId, setListPostAfterCreatePost }) {
     const createNewPost = async (e) => {
         e.preventDefault()
         try {
-            await axios.post('http://localhost:9999/posts', newPost);
+            await axios.post('http://localhost:8000/posts', newPost);
             setListPostAfterCreatePost(newPost)
 
             console.log("add post success , post is : ",

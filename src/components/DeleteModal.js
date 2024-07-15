@@ -12,7 +12,7 @@ function DeleteModal({ id, setListPostAfterDeletePostById }) {
     // delete function : 
     const deletePost = async (id) => {
         try {
-            await axios.delete(`http://localhost:9999/posts/${id}`);
+            await axios.delete(`http://localhost:8000/posts/${id}`);
             setListPostAfterDeletePostById(id)
 
         } catch (error) {
