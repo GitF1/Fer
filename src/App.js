@@ -1,5 +1,3 @@
-// App.js
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
@@ -8,11 +6,9 @@ import Register from "./pages/auth/Register";
 import { ToastContainer } from "react-toastify";
 import Appheader from "./pages/auth/Appheader";
 import UserAccount from "./pages/auth/UserAccount";
-
 import MovieReview from "./components/MovieReview";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
-import { BrowserRouter as Router } from "react-router-dom";
 import MoviesList from "./components/MoviesList";
 
 function App() {
