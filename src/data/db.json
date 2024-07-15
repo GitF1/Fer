@@ -1,0 +1,60 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "The Shawshank Redemption",
+      "genre": "Drama",
+      "year": 1994
+    },
+    {
+      "id": 2,
+      "title": "The Godfather",
+      "genre": "Crime",
+      "year": 1972
+    },
+    {
+      "id": 3,
+      "title": "The Dark Knight",
+      "genre": "Action",
+      "year": 2008
+    },
+    {
+      "id": 4,
+      "title": "Pulp Fiction",
+      "genre": "Crime",
+      "year": 1994
+    },
+    {
+      "id": 5,
+      "title": "Forrest Gump",
+      "genre": "Drama",
+      "year": 1994
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "userId": "adminuser",
+      "movieId": "1",
+      "rating": 5,
+      "timeCreated": "7/15/2024 4:12:08 AM",
+      "content": "Not so bad!"
+    },
+    {
+      "id": "2",
+      "userId": "adminuser",
+      "movieId": "2",
+      "rating": 7,
+      "timeCreated": "7/15/2024 6:14:15 AM",
+      "content": "It's okay!"
+    },
+    {
+      "id": "3",
+      "userId": "ntuser",
+      "movieId": "1",
+      "rating": 8,
+      "timeCreated": "7/15/2024 7:12:15 AM",
+      "content": "Great movie, good to see it!"
+    }
+  ]
+}
