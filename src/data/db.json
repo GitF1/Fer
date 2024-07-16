@@ -1,52 +1,67 @@
 {
   "movies": [
     {
-      "id": "1",
       "title": "The Shawshank Redemption",
       "genre": "Drama",
-      "year": 1994
+      "url": "https://ae01.alicdn.com/kf/HTB1mWWMXuGSBuNjSspbq6AiipXaH/The-Shawshank-Redemption-Retro-Vintage-Classic-Movie-Poster-Canvas-Painting-Wall-Sticker-Home-Art-Home-Decoration.jpg",
+      "year": 1994,
+      "id": "1"
     },
     {
-      "id": "2",
       "title": "The Godfather",
       "genre": "Crime",
-      "year": 1972
+      "url": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
+      "year": 1972,
+      "id": "2"
     },
     {
-      "id": "3",
       "title": "The Dark Knight",
       "genre": "Action",
-      "year": 2008
+      "url": "https://upload.wikimedia.org/wikipedia/vi/2/2d/Poster_phim_K%E1%BB%B5_s%C4%A9_b%C3%B3ng_%C4%91%C3%AAm_2008.jpg",
+      "year": 2008,
+      "id": "3"
     },
     {
-      "id": "4",
-      "title": "Pulp Fiction",
-      "genre": "Crime",
-      "year": 1994
+      "title": "Men In Black",
+      "genre": "Scifi",
+      "url": "https://m.media-amazon.com/images/I/7118Bwesb5L._AC_UF894,1000_QL80_.jpg",
+      "year": "1997",
+      "id": "4"
     },
     {
       "id": "5",
       "title": "Forrest Gump",
       "genre": "Drama",
+      "url": "/assets/images/placeholder-portrait.png",
       "year": 1994
     },
     {
       "id": "a1c5",
       "title": "A",
       "genre": "Action",
+      "url": "/assets/images/placeholder-portrait.png",
       "year": "1999"
     },
     {
       "title": "A",
       "genre": "Action",
       "year": "1990",
+      "url": "/assets/images/placeholder-portrait.png",
       "id": "391a"
     },
     {
-      "id": "4f85",
-      "title": "ABC",
+      "title": "ABCDE",
       "genre": "Action",
-      "year": "1999"
+      "url": "/assets/images/placeholder-portrait.png",
+      "year": "1999",
+      "id": "4f85"
+    },
+    {
+      "id": "0aae",
+      "title": "Interstellar",
+      "genre": "Scifi",
+      "url": "https://upload.wikimedia.org/wikipedia/vi/4/46/Interstellar_poster.jpg",
+      "year": "2014"
     }
   ],
   "user": [
@@ -115,6 +130,32 @@
       "image_link": "https://cfm.yidio.com/images/movie/229750/poster-180x270.jpg",
       "image_url": "",
       "video_link": "https://www.youtube.com/embed/2KzHbcUaATg?si=0XphcL69FhHyV1YJ"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "userId": "adminuser",
+      "movieId": "1",
+      "rating": 5,
+      "timeCreated": "7/15/2024 4:12:08 AM",
+      "content": "Not so bad!"
+    },
+    {
+      "id": "2",
+      "userId": "adminuser",
+      "movieId": "2",
+      "rating": 7,
+      "timeCreated": "7/15/2024 6:14:15 AM",
+      "content": "It's okay!"
+    },
+    {
+      "id": "3",
+      "userId": "ntuser",
+      "movieId": "1",
+      "rating": 8,
+      "timeCreated": "7/15/2024 7:12:15 AM",
+      "content": "Great movie, good to see it!"
     }
   ]
 }

@@ -10,9 +10,19 @@ import MovieReview from "./components/MovieReview";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import MoviesList from "./components/MoviesList";
+import MovieForm from "./components/MovieForm";
+import MovieGrid from "./components/MovieGrid";
+import MovieInfo from "./components/MovieInfo"
 import Post from './components/Post'
 
 function App() {
+ const movie= {
+    "id": "1",
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "url": "/assets/images/placeholder-portrait.png",
+    "year": 1994
+  };
   return (
     <Provider store={store}>
       <div className="App">
@@ -20,12 +30,21 @@ function App() {
         <BrowserRouter>
           <Appheader></Appheader>
           <Routes>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/" element={<>
+              <Home />
+              <MovieGrid />
+            </>}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/register" element={<Register />}></Route>
             <Route path="/user" element={<UserAccount />}></Route>
-            <Route path="/movielist" element={<MoviesList />}></Route>
+            <Route path="/movielist" element={
+              <>
+                <MovieForm />
+                <MoviesList />
+              </>
+            }></Route>
             <Route path="/review" element={<MovieReview />}></Route>
+            <Route path="/movie" element={<MovieInfo movieId="1" movie={movie}></MovieInfo>}></Route>
             <Route path="/post" element={<Post />}></Route>
           </Routes>
         </BrowserRouter>

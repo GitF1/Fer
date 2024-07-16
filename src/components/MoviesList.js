@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { setMovies, addMovie, setStatus } from '../features/movieSlice';
 import { Button, Table, Form, FormLabel } from 'react-bootstrap';
+import { MOVIE_JSON_URL } from '../utils/contants';
 
 
 
@@ -11,6 +12,7 @@ const MoviesList = () => {
     const [id, setID] = useState('');
     const [title, setTitle] = useState('');
     const [genre, setGenre] = useState('');
+    const [url, setUrl] = useState('');
     const [year, setYear] = useState('');
     const dispatch = useDispatch();
     const { movies } = useSelector((state) => state.movies);
@@ -19,7 +21,7 @@ const MoviesList = () => {
         const fetchMovies = async () => {
             dispatch(setStatus('loading'));
             try {
-                const response = await axios.get('http://localhost:3000/movies');
+                const response = await axios.get(MOVIE_JSON_URL);
                 dispatch(setMovies(response.data));
                 dispatch(setStatus('succeeded'));
             } catch (error) {
@@ -35,15 +37,17 @@ const MoviesList = () => {
         const updatedMovie = {
             title,
             genre,
+            url,
             year
         };
 
-        await axios.put(`http://localhost:3000/movies/${id}`, updatedMovie);
+        await axios.put(`${MOVIE_JSON_URL}/${id}`, updatedMovie);
         setTitle('');
         setGenre('');
+        setUrl('');
         setYear('');
         try {
-            const response = await axios.get('http://localhost:3000/movies');
+            const response = await axios.get(MOVIE_JSON_URL);
             dispatch(setMovies(response.data));
             dispatch(setStatus('succeeded'));
         } catch (error) {
@@ -52,9 +56,9 @@ const MoviesList = () => {
     };
     const handleDelete = async (id) => {
         console.log(id);
-        await axios.delete(`http://localhost:3000/movies/${id}`)
+        await axios.delete(`${MOVIE_JSON_URL}/${id}`)
         try {
-            const response = await axios.get('http://localhost:3000/movies');
+            const response = await axios.get(MOVIE_JSON_URL);
             dispatch(setMovies(response.data));
             dispatch(setStatus('succeeded'));
         } catch (error) {
@@ -93,6 +97,13 @@ const MoviesList = () => {
                         value={genre}
                         onChange={(e) => setGenre(e.target.value)}
                         required />
+                         <Form.Label>URL:</Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="title"
+                        value={url}
+                        onChange={(e) => setUrl(e.target.value)}
+                        required />
                     <Form.Label>Year:</Form.Label>
 
                     <Form.Control
@@ -116,7 +127,7 @@ const MoviesList = () => {
             <Table striped bordered >
 
                 <thead>
-                    <th>ID</th>
+                    <th>Image</th>
                     <th>Title</th>
                     <th>Genre</th>
                     <th>Year</th>
@@ -126,7 +137,7 @@ const MoviesList = () => {
                     {movies.map((movie) => (
 
                         <tr id={movie.id}>
-                            <td>{movie.id}</td>
+                            <td>  <img src={movie.url}style={{ width: '100px', }} /></td>
                             <td>{movie.title}</td>
                             <td>{movie.genre}</td>
                             <td>{movie.year}</td>
@@ -136,6 +147,7 @@ const MoviesList = () => {
                                         setID(movie.id);
                                         setTitle(movie.title);
                                         setGenre(movie.genre);
+                                        setUrl(movie.url);
                                         setYear(movie.year);
 
                                     }}>Edit</Button>
