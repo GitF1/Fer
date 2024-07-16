@@ -13,7 +13,8 @@ import MoviesList from "./components/MoviesList";
 import ListCinemas from "./pages/admin/cinema/ListCinemas";
 import RegisterCinema from "./pages/admin/cinema/RegisterCinema";
 import UdpateCinema from "./pages/admin/cinema/UpdateCinema";
-
+import MovieGrid from "./components/MovieGrid";
+import MovieForm from "./components/MovieForm";
 function App() {
   const movie = {
     id: "1",
