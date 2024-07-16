@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import axios from 'axios'
 import "../styles/Review.css"
-import { setReviews, addReview, updateReview } from '../features/reviewSlice'
+import { setReviews, addReview, updateReview, deleteReview } from '../features/reviewSlice'
 import { REVIEW_JSON_URL } from '../utils/contants'
 
 export default function MovieReview(props) {
@@ -107,9 +107,32 @@ export default function MovieReview(props) {
             const response = await axios.put(REVIEW_JSON_URL + `/${myReview.id}`, updatedReview);
             dispatch(updateReview(response.data));
             setEditingReview(false);
+            setHaveReviewed(true);
             setMyReview(response.data);
+            setRate(response.data.rating);
+            setText(response.data.content);
+            setEditingRate(response.data.rating);
+            setEditingText(response.data.content);
         } catch(error) {
             console.log("Error updating review: " + error);
+        }
+    }
+
+    const handleDeleteReview = async (id) => {
+        try {
+            await axios.delete(REVIEW_JSON_URL + `/${id}`).then(res => {
+                dispatch(deleteReview(id));
+                setRate(-1);
+                setText("");
+                setHaveReviewed(false);
+                setWritingReview(false);
+                setEditingReview(false);
+                setMyReview(null);
+                setEditingRate(-1);
+                setEditingText("");
+            })
+        } catch(error) {
+            console.log("Error deleting review: " + error);
         }
     }
 
@@ -187,7 +210,8 @@ export default function MovieReview(props) {
                     </div>
                     <div className='submit-container'>
                         <button className='pinkButton' type="button" style={{marginRight: '20px'}} onClick={closeReview}> Đóng bình luận </button>
-                        <button id="submitReviewMovieButton" className="pinkButton" type="button" onClick={() => handleUpdateReview()}>Sửa bình luận</button>
+                        <button className="pinkButton" type="button" style={{marginRight: '20px'}} onClick={() => handleUpdateReview()}>Sửa bình luận</button>
+                        {/* <button className="pinkButton" type="button" onClick={() => handleDeleteReview(myReview.id)}>Xóa bình luận</button> */}
                     </div>
                 </div>
             ) : null} 

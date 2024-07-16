@@ -17,11 +17,13 @@ const reviewSlice = createSlice({
         updateReview(state, action) {
             const updatedReview = action.payload;
             state.reviews = state.reviews.map(review => review.id === updatedReview.id ? updatedReview : review);
-            console.log("updateReview called: ");
-            console.log(state.reviews);
+        },
+        deleteReview(state, action) {
+            const delId = action.payload;
+            state.reviews = state.reviews.filter(review => review.Id !== delId);
         }
     }
 })
 
-export const {setReviews, addReview, updateReview} = reviewSlice.actions;
+export const {setReviews, addReview, updateReview, deleteReview} = reviewSlice.actions;
 export default reviewSlice.reducer;
