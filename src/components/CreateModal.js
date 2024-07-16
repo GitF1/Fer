@@ -66,8 +66,7 @@ function CreateModal({ newPostId, setListPostAfterCreatePost }) {
                             />
                         </Form.Group>
                         <Row>
-                            <Col sm={6}>
-                                <Form.Group className='mt-4'>
+                        <Form.Group className='mt-4'>
                                     <Form.Label>Image</Form.Label>
                                     <Form.Control
                                         placeholder='Enter link image..'
@@ -83,25 +82,6 @@ function CreateModal({ newPostId, setListPostAfterCreatePost }) {
                                         }
                                     />
                                 </Form.Group>
-                            </Col>
-                            <Col sm={6}>
-                                <Form.Group className='mt-4'>
-                                    <Form.Label>OR</Form.Label>
-                                    <Form.Control
-                                        type='file'
-                                        onChange={
-                                            (e) => {
-                                                const file = e.target.files[0]
-                                                setNewPost(post => ({
-                                                    ...post,
-                                                    image_link: '',
-                                                    image_url: URL.createObjectURL(file)
-                                                }))
-                                            }
-                                        }
-                                    />
-                                </Form.Group>
-                            </Col>
                         </Row>
                         <Form.Group className='mt-4'>
                             <Form.Label>Video</Form.Label>

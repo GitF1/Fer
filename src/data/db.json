@@ -101,12 +101,20 @@
   ],
   "posts": [
     {
-      "description": " Bo già (tiếng Anh: Dad, I'm Sorry) là một bộ phim điện ảnh Việt Nam thuộc thể loại hài – chính kịch ra mắt năm 2021 do Trấn Thành và Vũ Ngọc Đãng đồng đạo diễn",
       "id": "1",
-      "time": "7/16/2024, 7:22:35 AM",
-      "image_link": "sdfasd",
+      "description": "Bố già (tiếng Anh: Dad, I'm Sorry) là một bộ phim điện ảnh Việt Nam thuộc thể loại hài – chính kịch ra mắt năm 2021 do Trấn Thành và Vũ Ngọc Đãng đồng đạo diễn",
+      "time": "7/16/2024, 9:27:23 AM",
+      "image_link": "https://th.bing.com/th/id/OIP.XMuuQndM9Rog8qVJ4Lx0yAHaGK?rs=1&pid=ImgDetMain",
       "image_url": "",
-      "video_link": "https://v16-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-0068c001-euttp/owFXg8IGfUeNqR0AkWyfRPIR3WLCzGAfobEORA/?a=1988&bti=NDU3ZjAwOg%3D%3D&ch=0&cr=3&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=1124&bt=562&cs=0&ds=6&ft=-Csk_m7nPD12NRvRRT-UxxZFaY6e3wv25IcAp&mime_type=video_mp4&qs=0&rc=ZmU4NWg1NTo5NjZmOmk2NEBpMzY7bW45cnVzcDMzZjczM0AzNDVeNWAtXi0xL18xLjQ2YSNtaTReMmRjMnNgLS1kMWNzcw%3D%3D&btag=e00090000&expire=1721263100&l=202407160036565E4C4E7547624A3CBC67&ply_type=2&policy=2&signature=64016e9fd88af1065e4cf9436732f3d7&tk=tt_chain_token"
+      "video_link": "https://www.youtube.com/embed/oA-BhGNK7qw?si=OaZOHQQg7K2gbr9o"
+    },
+    {
+      "description": "Đi qua những đau khổ và phản bội, mối tình đơn phương của Ngạn dành cho cô bạn thân thời thơ ấu Hà Lan kéo dài cả một thế hệ trong bộ phim siêu lãng mạn này",
+      "id": "2",
+      "time": "7/16/2024, 9:33:33 AM",
+      "image_link": "https://cfm.yidio.com/images/movie/229750/poster-180x270.jpg",
+      "image_url": "",
+      "video_link": "https://www.youtube.com/embed/2KzHbcUaATg?si=0XphcL69FhHyV1YJ"
     }
   ]
 }
