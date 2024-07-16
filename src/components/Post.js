@@ -6,6 +6,7 @@ import ImageModal from './ImageModal'
 import VideoModal from './VideoModal'
 import CreateModal from './CreateModal'
 import EditModal from "./EditModal"
+import { toast } from 'react-toastify';
 
 const Post = () => {
 
@@ -32,6 +33,19 @@ const Post = () => {
     };
     // setListPostAfterDeletePostById function : 
     const setListPostAfterDeletePostById = (id) => {
+
+        // toast message : 
+        toast.success('Delete post successfully!', {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 3000, // Auto close after 5 seconds
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+
+
         const newList = listPosts.filter(p => (
             p.id !== id
         ))
@@ -39,6 +53,18 @@ const Post = () => {
     }
     // setListPostAfterCreatePost function : 
     const setListPostAfterCreatePost = (newPost) => {
+
+        // toast message : 
+        toast.success('Create post successfully!', {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 3000, // Auto close after 5 seconds
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+
         setListPosts(list => (
             [
                 ...list,
@@ -49,6 +75,16 @@ const Post = () => {
     //setListPostAfterEditPost function : 
     const setListPostAfterEditPost = (id, editPost) => {
 
+         // toast message : 
+         toast.success('Edit post successfully!', {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 3000, // Auto close after 5 seconds
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
 
         const newList = listPosts.map(p => {
             if (p.id !== id) {
@@ -91,13 +127,13 @@ const Post = () => {
                                     <td>{post.time}</td>
                                     <td>{post.description}</td>
                                     <td>
-                                        <ImageModal image_link={post.image_link} />
+                                        <ImageModal image_link={post.image_link} image_url={post.image_url} />
                                     </td>
                                     <td>
                                         <VideoModal video_link={post.video_link} />
                                     </td>
                                     <td>
-                                        <EditModal post={post}  setListPostAfterEditPost={setListPostAfterEditPost}/>
+                                        <EditModal post={post} setListPostAfterEditPost={setListPostAfterEditPost} />
                                         <DeleteModal id={post.id} setListPostAfterDeletePostById={setListPostAfterDeletePostById} />
                                     </td>
                                 </tr>

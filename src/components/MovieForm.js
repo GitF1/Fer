@@ -4,11 +4,12 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { addMovie,setMovies } from '../features/movieSlice';
-
+import { MOVIE_JSON_URL } from '../utils/contants';
 
 function MovieForm() {
     const [title, setTitle] = useState('');
     const [genre, setGenre] = useState('');
+    const [url, setUrl]= useState('');
     const [year, setYear] = useState('');
     const dispatch = useDispatch();
     const handleSubmit = async (e) => {
@@ -17,14 +18,16 @@ function MovieForm() {
         const newMovie = {
             title,
             genre,
+            url,
             year
         };
-        await axios.post(`http://localhost:3000/movies`, newMovie);
+        await axios.post(MOVIE_JSON_URL, newMovie);
         // dispatch(addMovie(newMovie));
-        const response = await axios.get('http://localhost:3000/movies');
+        const response = await axios.get(MOVIE_JSON_URL);
             dispatch(setMovies(response.data));
         setTitle('');
         setGenre('');
+        setUrl('');
         setYear('');
 
 
@@ -55,7 +58,17 @@ function MovieForm() {
                         placeholder="Enter movie genre"
                     />
                 </Form.Group>
-
+                <Form.Group controlId="formUrl">
+                    <Form.Label>URL</Form.Label>
+                    <Form.Control
+                        type="text"
+                        name="url"
+                        value ={url}
+        
+                        onChange={(e)=>setUrl(e.target.value)}
+                        placeholder="Enter url"
+                    />
+                </Form.Group>
                 <Form.Group controlId="formYear">
                     <Form.Label>Year</Form.Label>
                     <Form.Control
