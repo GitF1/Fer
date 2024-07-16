@@ -3,7 +3,7 @@ import { Image } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-function ImageModal({ image_link }) {
+function ImageModal({ image_link, image_url }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -21,7 +21,7 @@ function ImageModal({ image_link }) {
         </Modal.Header>
         <Modal.Body>
           <div className='d-flex justify-content-center'>
-            <Image src={image_link} fluid thumbnail />
+            <Image src={image_link ? image_link : image_url} fluid thumbnail />
           </div>
         </Modal.Body>
         <Modal.Footer>

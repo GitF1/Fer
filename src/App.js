@@ -10,6 +10,7 @@ import MovieReview from "./components/MovieReview";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import MoviesList from "./components/MoviesList";
+import Post from './components/Post'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/user" element={<UserAccount />}></Route>
             <Route path="/movielist" element={<MoviesList />}></Route>
             <Route path="/review" element={<MovieReview />}></Route>
+            <Route path="/post" element={<Post />}></Route>
           </Routes>
         </BrowserRouter>
       </div>

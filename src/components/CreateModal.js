@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
-import { Form, InputGroup } from 'react-bootstrap';
+import { Col, Form, InputGroup, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
@@ -65,22 +65,44 @@ function CreateModal({ newPostId, setListPostAfterCreatePost }) {
                                 }
                             />
                         </Form.Group>
-                        <Form.Group className='mt-4'>
-                            <Form.Label>Image</Form.Label>
-                            <Form.Control
-                                placeholder='Enter link image..'
-                                type='text'
-                                required
-                                onChange={
-                                    (e) => {
-                                        setNewPost(post => ({
-                                            ...post,
-                                            image_link: e.target.value
-                                        }))
-                                    }
-                                }
-                            />
-                        </Form.Group>
+                        <Row>
+                            <Col sm={6}>
+                                <Form.Group className='mt-4'>
+                                    <Form.Label>Image</Form.Label>
+                                    <Form.Control
+                                        placeholder='Enter link image..'
+                                        type='text'
+                                        onChange={
+                                            (e) => {
+                                                setNewPost(post => ({
+                                                    ...post,
+                                                    image_link: e.target.value,
+                                                    image_url: ''
+                                                }))
+                                            }
+                                        }
+                                    />
+                                </Form.Group>
+                            </Col>
+                            <Col sm={6}>
+                                <Form.Group className='mt-4'>
+                                    <Form.Label>OR</Form.Label>
+                                    <Form.Control
+                                        type='file'
+                                        onChange={
+                                            (e) => {
+                                                const file = e.target.files[0]
+                                                setNewPost(post => ({
+                                                    ...post,
+                                                    image_link: '',
+                                                    image_url: URL.createObjectURL(file)
+                                                }))
+                                            }
+                                        }
+                                    />
+                                </Form.Group>
+                            </Col>
+                        </Row>
                         <Form.Group className='mt-4'>
                             <Form.Label>Video</Form.Label>
                             <Form.Control
@@ -106,7 +128,7 @@ function CreateModal({ newPostId, setListPostAfterCreatePost }) {
                             <Button
                                 variant="primary"
                                 type='submit'
-                               >
+                            >
                                 Create
                             </Button>
                         </Modal.Footer>

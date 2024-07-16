@@ -91,7 +91,7 @@ const Post = () => {
                                     <td>{post.time}</td>
                                     <td>{post.description}</td>
                                     <td>
-                                        <ImageModal image_link={post.image_link} />
+                                        <ImageModal image_link={post.image_link} image_url = {post.image_url} />
                                     </td>
                                     <td>
                                         <VideoModal video_link={post.video_link} />

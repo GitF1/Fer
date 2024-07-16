@@ -11,13 +11,14 @@ function EditModal({ post, setListPostAfterEditPost }) {
     const handleShow = () => setShow(true);
 
     // use useState to create edit post : 
-    const [editPost, setEditPost] = useState(post)
+    const [editPost, setEditPost] = useState({ ...post })
 
     // fetch to edit post : 
 
 
     const editPostById = async (e) => {
         e.preventDefault()
+        console.log('edit post : ', editPost);
         try {
             await axios.put(`http://localhost:8000/posts/${post.id}`, editPost);
             setListPostAfterEditPost(post.id, editPost)
