@@ -10,6 +10,9 @@ import MovieReview from "./components/MovieReview";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import MoviesList from "./components/MoviesList";
+import ListCinemas from "./pages/admin/cinema/ListCinemas";
+import RegisterCinema from "./pages/admin/cinema/RegisterCinema";
+import UdpateCinema from "./pages/admin/cinema/UpdateCinema";
 
 function App() {
   const movie = {
@@ -19,6 +22,7 @@ function App() {
     url: "/assets/images/placeholder-portrait.png",
     year: 1994,
   };
+
   return (
     <Provider store={store}>
       <div className="App">
@@ -48,6 +52,9 @@ function App() {
               }
             ></Route>
             <Route path="/review" element={<MovieReview />}></Route>
+            <Route path="/cinema/manage" element={<ListCinemas />}></Route>
+            <Route path="/cinema/create" element={<RegisterCinema />}></Route>
+            <Route path="/cinema/update/:id" element={<UdpateCinema />}></Route>
           </Routes>
         </BrowserRouter>
       </div>
