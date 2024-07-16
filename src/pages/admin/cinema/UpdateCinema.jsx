@@ -2,9 +2,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
 import { API } from "../../../utils/api";
 import FormUpdate from "../../../components/UI/form/FormUpdate";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 function UdpateCinema() {
   const { id } = useParams();

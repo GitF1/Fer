@@ -1,7 +1,5 @@
-import { PORT_JSON_SERVER } from "./contants";
+import { PORT_JSON_SERVER } from "./constants";
 
 export const API = {
-  //   UPDATE_CINEMA: `http://localhost:${PORT_JSON_SERVER}/cinemas/update`,
-  //   GET_CINEMA: `http://localhost:${PORT_JSON_SERVER}/cinema/:id`,
   CINEMA: `http://localhost:${PORT_JSON_SERVER}/cinemas`,
 };

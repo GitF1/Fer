@@ -1,6 +1,6 @@
 import axios from "axios";
-import FormCreate from "../../components/UI/form/FormCreate";
-import { API } from "../../utils/api";
+import FormCreate from "../../../components/UI/form/FormCreate";
+import { API } from "../../../utils/api";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
