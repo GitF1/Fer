@@ -73,6 +73,14 @@
       "rating": 8,
       "timeCreated": "7/15/2024 7:12:15 AM",
       "content": "Great movie, good to see it!"
+    },
+    {
+      "id": "4",
+      "userId": "1",
+      "movieId": "1",
+      "rating": 5,
+      "timeCreated": "7/16/2024 11:27:44 AM",
+      "content": "bad"
     }
   ],
   "user": [
@@ -125,7 +133,6 @@
       "id": "eba0"
     }
   ],
-
   "posts": [
     {
       "id": "1",

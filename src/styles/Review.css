@@ -107,7 +107,7 @@ textarea {
     margin: 0;
 }
 
-#submitReviewMovieButton {
+.pinkButton {
     padding: 10px 20px;
     background-color: rgb(216, 45, 139);
     color: white;
